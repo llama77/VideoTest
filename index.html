@@ -17,9 +17,33 @@
   Your browser does not support HTML video.
 </video>
 
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="resetVideo()">Reset</button> 
+</div> 
+
+
+  
 <script>
 vid=document.getElementById("vid")
 vid.disablePictureInPicture = true
+
+var myVideo = document.getElementById("vid"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function resetVideo(){
+
+let vid = document.getElementById("vid");
+vid.currentTime = 0;
+
+}
+  
 </script>
 
 </body> 
