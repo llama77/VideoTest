@@ -11,12 +11,16 @@
 }
 </style>
   
-<video autoplay disablepictureinpicture disableremoteplayback controls controlslist=" nodownload noremoteplayback noplaybackrate"  >
+<video id="vid" autoplay disablepictureinpicture disableremoteplayback controls controlslist=" nodownload noremoteplayback noplaybackrate"  >
   <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
   <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/ogg">
   Your browser does not support HTML video.
 </video>
 
+<script>
+vid=document.getElementById("vid")
+vid.disablePictureInPicture = true
+</script>
 
 </body> 
 </html>
