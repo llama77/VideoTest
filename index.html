@@ -40,13 +40,13 @@
                 box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             }
         </style>
-
+        
         <video id="vid" autoplay controlslist=" nodownload noremoteplayback noplaybackrate">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/ogg" />
             Your browser does not support HTML video.
         </video>
-
+        <a>testing</a>
         <div style="text-align: center;">
             <button style="margin-left: 25px;" onclick="playPause()">Play/Pause Video</button>
             <button onclick="resetVideo()">Restart Video</button>
@@ -66,7 +66,7 @@
             function resetVideo() {
                 let vid = document.getElementById("vid");
                 vid.currentTime = 0;
-                if (vid.paused) vid.play();
+                vid.play();
             }
         </script>
     </body>
