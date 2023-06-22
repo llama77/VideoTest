@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no" />
 <html>
     <body>
         <style>
@@ -43,18 +43,16 @@
                 margin-right: 20px;
             }
         </style>
-        
+
         <div style="text-align: center;">
-            
-        <video id="vid" autoplay controlslist=" nodownload noremoteplayback noplaybackrate">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/ogg" />
-            Your browser does not support HTML video.
-        </video>
-        
-            <button  onclick="playPause()">Play/Pause Video</button>
-            <button  onclick="resetVideo()">Restart Video</button>
-            
+            <video id="vid" autoplay controlslist=" nodownload noremoteplayback noplaybackrate">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/ogg" />
+                Your browser does not support HTML video.
+            </video>
+
+            <button onclick="playPause()">Play/Pause Video</button>
+            <button onclick="resetVideo()">Restart Video</button>
         </div>
 
         <script>
@@ -72,7 +70,6 @@
                 let vid = document.getElementById("vid");
                 vid.play();
                 vid.currentTime = 0;
-                
             }
         </script>
     </body>
