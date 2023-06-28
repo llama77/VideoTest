@@ -46,9 +46,10 @@
         </style>
 
         <div style="text-align: center;">
-            <video id="vid" autoplay controlslist=" nodownload noremoteplayback noplaybackrate">
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/ogg" />
+            <video style="pointer-events: none;" type="file" id="vid" autoplay controlslist=" nodownload noremoteplayback noplaybackrate">
+                <!--The ending tag #t=6,11 starts the video at 6 seconds-->
+		<source src=file:///C:/Users/wasylishynd/OneDrive%20-%20Grey%20County/Desktop/GR-kisok-ipad/artistvideo.mp4#t=6 type="video/mp4" />
+
                 Your browser does not support HTML video.
             </video>
 
@@ -70,8 +71,18 @@
             function resetVideo() {
                 let vid = document.getElementById("vid");
                 vid.play();
-                vid.currentTime = 0;
+                vid.currentTime = 5;
             }
+
+            var video = document.getElementById('vid')
+
+            video.addEventListener('ended', function(){
+
+            video.currentTime = 5;
+
+            video.pause();
+            });
+
         </script>
     </body>
 </html>
