@@ -12,12 +12,14 @@
                 overflow: auto;
                 background-color: #981c64;
             }
+
             video {
                 object-fit: fill;
                 width: 100%;
                 object-fit: fill; // use "cover" to avoid distortion
                 position: absolute;
             }
+            
             button {
                 padding-top: 100px;
                 background-color: #64981c;
@@ -47,8 +49,8 @@
 
         <div style="text-align: center;">
             <video style="pointer-events: none;" type="file" id="vid" autoplay controlslist=" nodownload noremoteplayback noplaybackrate">
-                <!--The ending tag #t=6,11 starts the video at 6 seconds-->
-                <source src=https://www.w3schools.com/html/mov_bbb.mp4#t=6 type="video/mp4" /> Your browser does not support HTML video.
+                <!--The ending tag #t=6,11 starts the video at 6 seconds just done to avoid the black fade in and display the splash screen-->
+                <source src=file:///C:/Users/wasylishynd/OneDrive%20-%20Grey%20County/Desktop/GR-kisok-ipad/artistvideo.mp4#t=5 type="video/mp4" />
             </video>
 
             <button onclick="playPause()">Play/Pause Video</button>
@@ -56,10 +58,8 @@
         </div>
 
         <script>
-            vid = document.getElementById("vid");
-            vid.disablePictureInPicture = true;
-
-            var myVideo = document.getElementById("vid");
+            myVideo = document.getElementById("vid");
+            myVideo.disablePictureInPicture = true;
 
             function playPause() {
                 if (myVideo.paused) myVideo.play();
@@ -67,18 +67,16 @@
             }
 
             function resetVideo() {
-                let vid = document.getElementById("vid");
-                vid.play();
-                vid.currentTime = 5;
+                myVideo.play();
+                myVideo.currentTime = 5;
             }
-
-            var video = document.getElementById("vid");
-
-            video.addEventListener("ended", function () {
-                video.currentTime = 5;
-
-                video.pause();
+            
+            /* Once video ends resets back to 5 seconds into the video and pauses it */
+            myVideo.addEventListener("ended", function () {
+                myVideo.currentTime = 5;
+                myVideo.pause();
             });
         </script>
+
     </body>
 </html>
